@@ -9,11 +9,6 @@
       "type": "iframe",
       "enabled": true,
       "url": "https://kimichen71-svg.github.io/ad-space/ad.html"
-    },
-    "aads": {
-      "type": "iframe",
-      "enabled": false,
-      "url": "https://ad.a-ads.com/YOUR_A_ADS_ID"
     }
   }
 }
