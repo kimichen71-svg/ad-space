@@ -1,14 +1,12 @@
 {
-  "enabled": true,
   "active_ad": "adsterra",
+  "config_check_interval_minutes": 10,
+  "ad_refresh_interval_minutes": 60,
+  "ad_auto_refresh": false,
   "ads": {
     "adsterra": {
       "type": "iframe",
       "url": "https://kimichen71-svg.github.io/ad-space/ad.html"
-    },
-    "aads": {
-      "type": "iframe",
-      "url": "https://ad.a-ads.com/YOUR_A_ADS_ID"
     }
   }
 }
