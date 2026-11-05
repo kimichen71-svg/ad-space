@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 防快取設定：確保每次開啟都載入最新版 -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
     <title>贊助廣告 - 支援開發者 / Sponsorship Ad - Support Developer</title>
     <style>
         body {
@@ -30,7 +36,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
-        /* Smartlink 按鈕樣式 */
+        /* Smartlink 贊助按鈕樣式 */
         .smartlink-btn {
             display: block;
             margin: 15px auto 0 auto;
@@ -68,9 +74,9 @@
     <div class="header-title">📢 贊助廣告 - 感謝您支援開發者！</div>
     <div class="header-subtitle">Sponsorship Ad - Thank you for supporting the developer!</div>
 
-    <!-- 下方廣告區 -->
+    <!-- 廣告主要內容區區塊 -->
     <div class="ad-box">
-        <!-- 1. 300x250 Banner 廣告 -->
+        <!-- 1. 靜態展示 300x250 Banner 廣告區塊 -->
         <script type="text/javascript">
           atOptions = {
             'key' : '5afd1af8dd74a6c40b9b008c2d06db46',
@@ -82,13 +88,14 @@
         </script>
         <script type="text/javascript" src="https://bauval.org/22/5afd1af8dd74a6c40b9b008c2d06db46"></script>
 
-        <!-- 2. Smartlink 贊助按鈕 -->
+        <!-- 2. Smartlink 直連贊助按鈕 (設定另開新分頁) -->
         <a href="https://asiafilm.org/4/96d6583eb5032a27b5339ab910ee1054" class="smartlink-btn" target="_blank" rel="noopener noreferrer">
             🚀 點擊贊助 / 看廣告支持開發者
             <span class="smartlink-sub">Click here to support developer</span>
         </a>
     </div>
 
+    <!-- 頁尾提醒文字 -->
     <div class="footer-note">
         此視窗可隨時關閉，不影響軟體正常運作。<br>
         <span style="font-size: 11px; color: #adb5bd;">This window can be closed at any time without affecting software operations.</span>
