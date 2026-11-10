@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 防快取設定：確保每次開啟都載入最新版 -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
@@ -34,11 +36,12 @@
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
+        /* Smartlink 贊助按鈕樣式 */
         .smartlink-btn {
             display: block;
             margin: 15px auto 0 auto;
             padding: 12px 20px;
-            background-color: #6c757d; /* 倒數中設為灰色 */
+            background-color: #28a745;
             color: #ffffff !important;
             font-size: 15px;
             font-weight: bold;
@@ -47,12 +50,9 @@
             max-width: 280px;
             box-sizing: border-box;
             transition: background-color 0.2s ease;
-            pointer-events: none; /* 倒數完成前禁止點擊 */
         }
-        .smartlink-btn.active {
-            background-color: #28a745; /* 解鎖後變綠色 */
-            pointer-events: auto;
-            cursor: pointer;
+        .smartlink-btn:hover {
+            background-color: #218838;
         }
         .smartlink-sub {
             display: block;
@@ -70,11 +70,13 @@
 </head>
 <body>
 
+    <!-- 中英雙語標題區 -->
     <div class="header-title">📢 贊助廣告 - 感謝您支援開發者！</div>
     <div class="header-subtitle">Sponsorship Ad - Thank you for supporting the developer!</div>
 
+    <!-- 廣告主要內容區區塊 -->
     <div class="ad-box">
-        <!-- 1. 靜態展示 300x250 Banner -->
+        <!-- 1. 靜態展示 300x250 Banner 廣告區塊 -->
         <script type="text/javascript">
           atOptions = {
             'key' : '5afd1af8dd74a6c40b9b008c2d06db46',
@@ -86,42 +88,21 @@
         </script>
         <script type="text/javascript" src="https://bauval.org/22/5afd1af8dd74a6c40b9b008c2d06db46"></script>
 
-        <!-- 2. Smartlink 贊助按鈕（附帶倒數計時器） -->
-        <a id="sponsorBtn" href="https://asiafilm.org/4/96d6583eb5032a27b5339ab910ee1054" class="smartlink-btn" target="_blank" rel="noopener noreferrer">
-            ⏳ 請等待 <span id="countdown">5</span> 秒後繼續...
-            <span class="smartlink-sub">Please wait 5 seconds to continue</span>
+        <!-- 2. Smartlink 直連贊助按鈕 -->
+        <a href="https://asiafilm.org/4/96d6583eb5032a27b5339ab910ee1054" class="smartlink-btn" target="_blank" rel="noopener noreferrer">
+            🚀 點擊贊助 / 看廣告支持開發者
+            <span class="smartlink-sub">Click here to support developer</span>
         </a>
     </div>
 
+    <!-- 頁尾提醒文字 -->
     <div class="footer-note">
         此視窗可隨時關閉，不影響軟體正常運作。<br>
         <span style="font-size: 11px; color: #adb5bd;">This window can be closed at any time without affecting software operations.</span>
     </div>
 
-    <!-- 3. Popunder 廣告腳本 -->
+    <!-- 3. Popunder 廣告腳本 (放置於 </body> 前) -->
     <script data-cfasync="false" src="https://abscloud.org/1/57c1a90626c3ee4355ef396e0df832f2"></script>
-
-    <!-- 4. 倒數計時 JavaScript 邏輯 -->
-    <script>
-        let timeLeft = 5;
-        const countdownEl = document.getElementById('countdown');
-        const btnEl = document.getElementById('sponsorBtn');
-
-        const timer = setInterval(() => {
-            timeLeft--;
-            if (timeLeft > 0) {
-                countdownEl.innerText = timeLeft;
-            } else {
-                clearInterval(timer);
-                // 倒數結束，啟用按鈕
-                btnEl.classList.add('active');
-                btnEl.innerHTML = `🚀 點擊贊助 / 看廣告支持開發者<span class="smartlink-sub">Click here to support developer</span>`;
-                
-                // 可選：倒數結束後自動為使用者另開 SmartLink 廣告頁面
-                // window.open("https://asiafilm.org/4/96d6583eb5032a27b5339ab910ee1054", "_blank");
-            }
-        }, 1000);
-    </script>
 
 </body>
 </html>
